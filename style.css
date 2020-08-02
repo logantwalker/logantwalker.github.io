@@ -1,12 +1,18 @@
 html,
 body {
+    font-family: 'Quicksand', sans-serif;
     overflow-y: auto;
     margin: 0;
     padding: 0;
 }
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 17px !important;
+    padding-left: 1rem;
+}
 .background{
     position: relative;
-    top:-5rem;
+    top:-200px;
 }
 #test-particle{
     background-color:#222233;
@@ -14,22 +20,49 @@ body {
     width: 100%;
 }
 
-#greeting{
+#greeting-parent{
     position: relative;
     top: 10rem;
+}
+
+#greeting{
+    position: relative;
     left: 29.17%;
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, .9);
     color: #222233;
     text-align: center;
+    vertical-align: middle;
     z-index: 1;
 }
 
 #greeting h3{
+    font-weight: 500;
     margin-top: 1.25rem;
     font-size: 2rem;
 }
 
 #name-color{
     color:#107dac;
+}
+
+#view-work-btn{
+    justify-items: center;
+}
+
+#custom-btn{
+    background-color: rgba(0,0,0,.15);
+    border: 3px solid #ffffff;
+    padding-right: 1.25rem;
+}
+
+@keyframes btnHover {
+    from {background-color: rgba(0,0,0,.15);}
+    to {background-color: rgba(16,125,172,1);}
+}
+
+#custom-btn:hover{
+    animation-name: btnHover;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
 }
