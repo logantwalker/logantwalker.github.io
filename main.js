@@ -6,3 +6,9 @@ window.onload = function() {
         connectParticles: true
     });
   };
+
+$('#custom-btn').click(()=>{
+    $('html,body').animate({
+        scrollTop: $(".nav").offset().top},
+        'slow');
+})
