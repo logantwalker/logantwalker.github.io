@@ -8,14 +8,14 @@ window.onload = function() {
     ScrollReveal({duration:1000}).reveal('#greeting-parent',{delay: 500})
 };
 
-var originalDistance = 2.4*($('#particle-div').height());
+var originalDistance = 2.41*($('#particle-div').height());
 
 $(document).on('scroll', (event)=>{
     handleNav()
 });
 
 $('#custom-btn').click(()=>{
-    $('html,body').animate({scrollTop: $(".nav").offset().top + 1},'slow');
+    $('html,body').animate({scrollTop: $(".nav").offset().top},'slow');
     ScrollReveal({duration:1000}).reveal('.nav')
 })
 
