@@ -15,9 +15,8 @@ $(document).on('scroll', (event)=>{
 });
 
 $('#custom-btn').click(()=>{
-    $('html,body').animate({scrollTop: $(".nav").offset().top},'slow');
+    $('html,body').animate({scrollTop: $(".nav").offset().top + 1},'slow');
     ScrollReveal({duration:1000}).reveal('.nav')
-    
 })
 
 function handleNav(){
