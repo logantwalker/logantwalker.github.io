@@ -1,3 +1,6 @@
+html.sr .load-hidden {
+    visibility: hidden;
+}
 html,
 body {
     font-family: 'Quicksand', sans-serif;
@@ -66,3 +69,6 @@ body {
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
 }
+ .nav{
+     background-color: #0e1a40;
+ }
