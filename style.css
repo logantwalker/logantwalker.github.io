@@ -91,3 +91,11 @@ body {
     position: fixed;
     top: 0px;
 }
+
+#github-stats{
+    margin-left: 4rem;
+    align-items: top;
+}
+#github-stats h2{
+    margin-top:0;
+}

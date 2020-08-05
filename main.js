@@ -1,3 +1,7 @@
+
+
+
+
 window.onload = function() {
     Particles.init({
         selector: '.background',
@@ -6,6 +10,7 @@ window.onload = function() {
         connectParticles: true
     });
     ScrollReveal({duration:1000}).reveal('#greeting-parent',{delay: 500})
+    
 };
 
 var originalDistance = 2.41*($('#particle-div').height());
