@@ -30,6 +30,8 @@ function getLangData(data){
 
     const langDataRequest = (urls) =>{
 
+        let stopCondition = urls.length;
+
         urls.forEach( (urlStr, i) =>{
 
             const onReject = (errThrown) => {
@@ -42,17 +44,27 @@ function getLangData(data){
                 url: urlStr
             
             }).then(function (response) {
-                console.log(response);
-                langDataArr.push(response)
-                // compileLangData(response);
-            
+                
+                dataCollect(response);
+                
             }, onReject);
         })
 
     }
     langDataRequest(langEndpoint);
-    compileLangData(langDataArr);
+    
+    
 
+}
+
+function dataCollect(res){
+    langDataArr.push(res);
+    if(langDataArr.length > 10){
+        compileLangData(langDataArr);
+    }
+    else{
+        return;
+    }
 }
 
 var languagesList = '';
@@ -61,24 +73,51 @@ var langCount = [];
 function compileLangData(data){
     
     const checkDupes = data =>{
-        console.log(data); 
+        data.forEach(obj =>{
+            let keys = Object.keys(obj);
+            
+            keys.forEach(key =>{
+                if(languagesList.includes(key)){
+                    return;
+                }
+                else{
+                    languagesList = languagesList + key + ', ';
+                }
+            })
+        })
     }
     checkDupes(data);
+    
 
-    // languagesList = languagesList.split(', ');
-    // languagesList.pop();
+    languagesList = languagesList.split(', ');
+    languagesList.pop();
 
-    // languagesList.forEach(()=>{
-    //     langCount.push(0);
-    // })
-    // console.log(langCount);
+    languagesList.forEach(()=>{
+        langCount.push(0);
+    })
+    console.log(languagesList);
 
 
 
-    // const getLangNums = data =>{
-    // }
+    const getLangNums = data =>{
+        languagesList.forEach((lang, i) =>{
+            data.forEach(obj =>{
+                let keys = Object.keys(obj);
+                keys.forEach(key =>{
+                    if(key === lang){
+                        langCount[i]+= obj[key];
+                        console.log(langCount);
+                    }
+                    else{
+                        return;
+                    }
+                })
+            })
+        })
+    }
 
-    // getLangNums(data);
+
+    getLangNums(data);
     // console.log(langCount);
 
 }
