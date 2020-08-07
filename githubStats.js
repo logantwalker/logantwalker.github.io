@@ -154,4 +154,49 @@ function dataViz(stats){
     }
     createDataSet(stats);
     console.log(finalDataArr);
+
+
+    // d3.js bar chart //
+
+    // var svg = d3.select("svg"),
+    //     margin = 200,
+    //     width = svg.attr("width") - margin,
+    //     height = svg.attr("height") - margin;
+
+
+    // var xScale = d3.scaleBand().range ([0, width]).padding(0.4),
+    //     yScale = d3.scaleLinear().range ([height, 0]);
+
+    // var g = svg.append("g")
+    //            .attr("transform", "translate(" + 100 + "," + 100 + ")");
+
+    console.log(window.innerHeight)
+    console.log(window.innerWidth)
+
+    const margin = 60;
+    const width = (window.innerWidth/1.) - 2 * margin;
+    const height = (window.innerHeight/2) - 2 * margin;
+    console.log(height)
+    console.log(width);
+
+    const svg = d3.select('svg');
+    const chart = svg.append('g')
+    .attr('transform', `translate(${margin}, ${margin})`);
+
+    const yScale = d3.scaleLinear()
+        .range([height, 0])
+        .domain([0, 100]);
+
+    chart.append('g')
+        .call(d3.axisLeft(yScale));
+
+    const xScale = d3.scaleBand()
+        .range([0, width])
+        .domain(finalDataArr.map((s) => s.language))
+        .padding(1)
+
+    chart.append('g')
+        .attr('transform', `translate(0, ${height})`)
+        .call(d3.axisBottom(xScale));
+
 }
