@@ -106,7 +106,7 @@ function compileLangData(data){
                 keys.forEach(key =>{
                     if(key === lang){
                         langCount[i]+= obj[key];
-                        console.log(langCount);
+                        
                     }
                     else{
                         return;
@@ -118,6 +118,40 @@ function compileLangData(data){
 
 
     getLangNums(data);
-    // console.log(langCount);
 
+    const githubStats = {
+        langs: languagesList,
+        vals: langCount
+    };
+
+    dataViz(githubStats);
+    
+}
+
+const finalDataArr= [];
+function dataViz(stats){
+    const langSum = stats.vals.reduce((a,b)=>{
+        return a+b;
+    });
+    
+    const percentArr = stats.vals.map((el)=>{
+        return ((el/langSum)*100).toFixed(2);
+    });
+
+    console.log(percentArr);
+    stats.percentage = percentArr;
+
+    const createDataSet = (stats) =>{
+        let langArr = stats.langs;
+        let langPrct = stats.percentage;
+
+        langArr.forEach((lang,i) =>{
+            finalDataArr.push({
+                language: lang,
+                percent: langPrct[i]
+            })
+        })
+    }
+    createDataSet(stats);
+    console.log(finalDataArr);
 }
