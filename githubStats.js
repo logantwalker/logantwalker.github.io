@@ -20,7 +20,7 @@ getRepoStats();
 var langDataArr=[];
 
 function getLangData(data){
-    // let repoCount = data.length;
+    const repoCount = data.length;
     let langEndpoint = [];
 
     data.forEach(repo =>{
@@ -45,7 +45,7 @@ function getLangData(data){
             
             }).then(function (response) {
                 
-                dataCollect(response);
+                dataCollect(response,repoCount);
                 
             }, onReject);
         })
@@ -57,9 +57,9 @@ function getLangData(data){
 
 }
 
-function dataCollect(res){
+function dataCollect(res,count){
     langDataArr.push(res);
-    if(langDataArr.length > 10){
+    if(langDataArr.length > count -1){
         compileLangData(langDataArr);
     }
     else{
@@ -155,27 +155,19 @@ function dataViz(stats){
     createDataSet(stats);
     console.log(finalDataArr);
 
-
-    // d3.js bar chart //
-
-    // var svg = d3.select("svg"),
-    //     margin = 200,
-    //     width = svg.attr("width") - margin,
-    //     height = svg.attr("height") - margin;
-
-
-    // var xScale = d3.scaleBand().range ([0, width]).padding(0.4),
-    //     yScale = d3.scaleLinear().range ([height, 0]);
-
-    // var g = svg.append("g")
-    //            .attr("transform", "translate(" + 100 + "," + 100 + ")");
-
-    console.log(window.innerHeight)
-    console.log(window.innerWidth)
-
     const margin = 60;
-    const width = (window.innerWidth/1.) - 2 * margin;
-    const height = (window.innerHeight/2) - 2 * margin;
+    var height;
+    var width;
+
+    if(window.innerWidth <= 600){
+        width = (window.innerWidth/1.1) - 2 * margin;
+        height = (window.innerHeight/2) - 2 * margin;
+    }
+    else{
+        width = (window.innerWidth/2) - 2 * margin;
+        height = (window.innerHeight/2) - 2 * margin;
+    }
+
     console.log(height)
     console.log(width);
 
@@ -193,10 +185,34 @@ function dataViz(stats){
     const xScale = d3.scaleBand()
         .range([0, width])
         .domain(finalDataArr.map((s) => s.language))
-        .padding(1)
+        .padding(0.5)
 
     chart.append('g')
         .attr('transform', `translate(0, ${height})`)
         .call(d3.axisBottom(xScale));
 
+    chart.selectAll()
+        .data(finalDataArr)
+        .enter()
+        .append('rect')
+        .attr('x', (s) => xScale(s.language))
+        .attr('y', (s) => yScale(s.percent))
+        .attr('height', (s) => height - yScale(s.percent))
+        .attr('width', xScale.bandwidth())
+
+    // VERTICAL GRID LINES
+    // chart.append('g')
+    //     .attr('class', 'grid')
+    //     .attr('transform', `translate(0, ${height})`)
+    //     .call(d3.axisBottom()
+    //         .scale(xScale)
+    //         .tickSize(-height, 0, 0)
+    //         .tickFormat(''))
+    
+    chart.append('g')
+        .attr('class', 'grid')
+        .call(d3.axisLeft()
+            .scale(yScale)
+            .tickSize(-width, 0, 0)
+            .tickFormat(''))
 }
