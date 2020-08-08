@@ -38,4 +38,23 @@ function handleNav(){
         return;
     }
 }
-        
+
+$('#nav-about').click(()=>{
+    $('html,body').animate({scrollTop: $("#about-page").offset().top},'slow');
+    ScrollReveal({duration:1000}).reveal('#github-stats')
+})
+
+$('#nav-portfolio').click(()=>{
+    $('html,body').animate({scrollTop: $("#portfolio-container").offset().top},'slow');
+    ScrollReveal({duration:1000}).reveal('#portfolio-content')
+})
+
+$('#nav-home').click(()=>{
+    $('html,body').animate({scrollTop: $("#particle-div").offset().top},'slow');
+    ScrollReveal({duration:1000}).reveal("#particle-div")
+})
+
+$('#nav-contact').click(()=>{
+    $('html,body').animate({scrollTop: $(".page-footer").offset().top},'slow');
+    
+})

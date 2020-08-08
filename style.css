@@ -151,6 +151,11 @@ body {
 .card-image{
     border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
+
+.page-footer{
+    background-color: #0e1a40; 
+    
+}
 /* --------------------- */
 
 svg {
