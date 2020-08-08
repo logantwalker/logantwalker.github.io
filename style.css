@@ -139,7 +139,7 @@ body {
 
 @keyframes cardHover {
     from {background-color: rgba(14,26,64,1); color:rgb(8,146,249);}
-    to {background-color: #393939;}
+    to {background-color: #595959;}
 }
 
 .card:hover{
