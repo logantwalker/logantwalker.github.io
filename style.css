@@ -83,8 +83,8 @@ body {
     margin-left: 10%;
 }
 #aboutme-desc{
-    text-align: center;
-    margin-left: 10%;
+    text-align: left;
+    margin-left: 20%;
 }
 
 .sticky{
@@ -113,6 +113,26 @@ body {
     vertical-align: top;
 }
 
+#portfolio-container{
+    background-color: #f5f5f5;
+}
+
+#portfolio-head{
+    margin-top: 3rem;
+    font-weight: 600;
+}
+#portfolio-head h1{
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.card{
+    border-radius: .8rem;
+}
+.card-image{
+    border-radius: 0.8rem 0.8rem 0rem 0rem;
+}
 /* --------------------- */
 
 svg {

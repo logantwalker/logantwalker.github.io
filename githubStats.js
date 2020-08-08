@@ -162,12 +162,12 @@ function dataViz(stats){
     if(window.innerWidth <= 600){
         width = (window.innerWidth/1.1) - 2 * margin;
         height = (window.innerHeight/2) - 2 * margin;
-        // $('#data-container').css('height', height)
+        
     }
     else{
         width = (window.innerWidth/2) - 2 * margin;
         height = (window.innerHeight/2) - 2 * margin;
-        // $('#data-container').css('height', height)
+        
     }
 
     console.log(height)
