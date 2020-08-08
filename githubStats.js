@@ -30,7 +30,7 @@ function getLangData(data){
 
     const langDataRequest = (urls) =>{
 
-        let stopCondition = urls.length;
+        
 
         urls.forEach( (urlStr, i) =>{
 

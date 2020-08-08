@@ -115,6 +115,7 @@ body {
 
 #portfolio-container{
     background-color: #f5f5f5;
+    
 }
 
 #portfolio-head{
@@ -126,10 +127,27 @@ body {
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
 }
+#portfolio-content{
+    margin-left: 3%;
+    margin-right: 3%;
+}
 
 .card{
+    background-color: #0e1a40;
     border-radius: .8rem;
 }
+
+@keyframes cardHover {
+    from {background-color: rgba(14,26,64,1); color:rgb(8,146,249);}
+    to {background-color: #393939;}
+}
+
+.card:hover{
+    animation-name: cardHover;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
 .card-image{
     border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
