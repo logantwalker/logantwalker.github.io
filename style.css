@@ -4,6 +4,7 @@ body {
     overflow-y: auto;
     margin: 0;
     padding: 0;
+    background-color:#222233;
 }
 .inline-icon {
     vertical-align: bottom;
@@ -15,8 +16,10 @@ body {
     top:-200px;
 }
 #particle-div{
+    background-color:#222233;
     width: 100%;
     margin-bottom: 0;
+    
 }
 
 #greeting-parent{
@@ -52,7 +55,7 @@ body {
 #custom-btn{
     background-color: rgba(0,0,0,.15);
     border: 3px solid #ffffff;
-    padding-right: 1.25rem;
+    padding-right: 1.1rem;
 }
 
 @keyframes btnHover {
@@ -69,7 +72,9 @@ body {
     background-color: #0e1a40;
     align-items: middle;
 }
-
+#about-page{
+    background-color: #ffffff;
+}
 #about-head{
     margin-top: 3rem;
     font-weight: 600;
@@ -80,11 +85,11 @@ body {
 }
 #aboutme-img{
     border-radius: 2rem;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 #aboutme-desc{
     text-align: left;
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 .sticky{
@@ -96,8 +101,8 @@ body {
     background-color: #0e1a40;
     color: #ffffff;
     border-radius: 5rem;
-    padding-top: 5rem;
-    margin-left: 4rem;
+    padding-top: 3rem;
+    margin-left: 6rem;
     align-items: top;
 }
 #github-stats h2{
@@ -119,6 +124,7 @@ body {
 }
 
 #portfolio-head{
+    padding-top: 3rem;
     margin-top: 3rem;
     font-weight: 600;
 }
@@ -191,3 +197,13 @@ line {
     stroke: #9FAAAE;
     stroke-opacity: 0.3;
 }
+
+
+/* responsivity */
+@media (max-width:600px){
+    #greeting{
+        left: 9%;
+    }   
+}
+
+
