@@ -1,6 +1,4 @@
-
-
-
+responsiveDataContainer();
 
 window.onload = function () {
     Particles.init({
@@ -81,3 +79,15 @@ $('#nav-contact').click(() => {
     $('html,body').animate({ scrollTop: $(".page-footer").offset().top }, 'slow');
 
 })
+
+function responsiveDataContainer(){
+    if(window.innerHeight > 850 && window.innerHeight < 980){
+        $('.data-container').css('height','475px');
+    }
+    else if(window.innerHeight > 980 && window.innerHeight < 1100){
+        $('.data-container').css('height','520px');
+    }
+    else if(window.innerHeight > 1100){
+        $('.data-container').css('height','700px');
+    }
+}
