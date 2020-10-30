@@ -1,0 +1,25 @@
+.section-body{
+    color: white;
+    background-color: #343434;
+    margin-bottom: 0;
+}
+.section-head{
+    text-align: left;
+    
+}
+.section-content{
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left:8.333% !important;
+    color:#343434;
+    background-color: white;
+}
+
+.section-content img{
+    margin-top: 2rem;
+    border-radius: 15%;
+}
+.divider{
+    background-color: #ED1C24;
+}

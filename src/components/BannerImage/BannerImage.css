@@ -1,0 +1,21 @@
+.parallax-container{
+    width: 100%;
+}
+
+.title-card{
+    background-color:#ffffff;
+    z-index: -1;
+    margin-bottom: 2.5rem;
+}
+
+.title-text{
+    font-weight: 500;
+    color: #343434;
+    margin: 10px;
+    margin-top: .25rem;
+    padding-top: 2rem;
+}
+
+.subtitle-text{
+    font-weight: 400;
+}

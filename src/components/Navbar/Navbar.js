@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Navbar.module.css';
+import './Navbar.css';
 import 'materialize-css';
 
 import BrandLogo from './assets/logo512.png'
@@ -9,7 +9,7 @@ import NavItem from "./NavItem/NavItem"
 const Navbar = (props) => {
     return (
         <React.Fragment>
-            <div className={classes.customNavbar}>
+            <div className='customNavbar'>
                 <div className='nav-content'>
                     <Row>
                         <Col>
