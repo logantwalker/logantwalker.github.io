@@ -38,7 +38,11 @@ const NavItem = (props) => {
                 <Button
                     flat
                     node="button"
-                    waves="light">{props.children}</Button>
+                    waves="light"
+                    onClick={props.click}
+                >
+                    {props.children}
+                </Button>
             </div>
         )
     }

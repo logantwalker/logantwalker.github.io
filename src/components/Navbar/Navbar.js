@@ -4,9 +4,37 @@ import 'materialize-css';
 
 import BrandLogo from './assets/logo512.png'
 import { Col, Row } from 'react-materialize';
-import NavItem from "./NavItem/NavItem"
+import NavItem from "./NavItem/NavItem";
 
-const Navbar = (props) => {
+import { animateScroll as scroll, scroller } from 'react-scroll';
+
+
+const Navbar = () => {
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    }
+    const scrollToAbout = () => {
+        scroller.scrollTo('about', {
+            duration: 800,
+            delay: 100,
+            smooth: 'easeInOutQuart'
+        })
+    }
+    const scrollToPortfolio = () => {
+        scroller.scrollTo('portfolio', {
+            duration: 800,
+            delay: 100,
+            smooth: 'easeInOutQuart'
+        })
+    }
+    const scrollToContact = () => {
+        scroller.scrollTo('contact', {
+            duration: 800,
+            delay: 100,
+            smooth: 'easeInOutQuart'
+        })
+    }
+
     return (
         <React.Fragment>
             <div className='customNavbar'>
@@ -16,16 +44,16 @@ const Navbar = (props) => {
                             <img height='75px' src={BrandLogo} alt='LW Logo' />
                         </Col>
                         <Col>
-                            <NavItem>Home</NavItem>
+                            <NavItem click={() => scrollToTop()}>Home</NavItem>
                         </Col>
                         <Col>
-                            <NavItem>About</NavItem>
+                            <NavItem click={() => scrollToAbout()}>About</NavItem>
                         </Col>
                         <Col>
-                            <NavItem>Portfolio</NavItem>
+                            <NavItem click={() => scrollToPortfolio()}>Portfolio</NavItem>
                         </Col>
                         <Col>
-                            <NavItem>Contact</NavItem>
+                            <NavItem click={() => scrollToContact()}>Contact</NavItem>
                         </Col>
                     </Row>
                 </div>

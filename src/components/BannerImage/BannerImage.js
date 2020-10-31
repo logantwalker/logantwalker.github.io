@@ -11,7 +11,7 @@ const BannerImage = (props) => {
     if (props.intro) {
         bannerStyle = (
             <React.Fragment>
-                <Row className='margin-remove'>
+                <Row>
                     <Parallax
                         image={<img alt="" width='100%' src={bannerImg1} />}
                         options={{

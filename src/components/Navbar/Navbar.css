@@ -14,3 +14,7 @@
     font: inherit !important;
     color: inherit !important;
 }
+
+button:hover{
+    color:#ED1C24;
+}

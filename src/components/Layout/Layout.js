@@ -4,7 +4,10 @@ import BannerImage from '../BannerImage/BannerImage';
 import About from '../About/About';
 import Portfolio from '../Portfolio/Portfolio';
 import Contact from '../Contact/Contact';
+
 import 'materialize-css'
+
+
 
 const Layout = (props) => {
     return (
