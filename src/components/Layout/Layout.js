@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import BannerImage from '../BannerImage/BannerImage';
 import About from '../About/About';
@@ -10,14 +10,15 @@ import 'materialize-css'
 
 
 const Layout = (props) => {
+
     return (
         <React.Fragment>
             <Navbar/>
-            <BannerImage intro={true}/>
-            <About/>
-            <Portfolio/>
-            <BannerImage intro={false}/>
-            <Contact/>
+            <BannerImage intro={true} />
+            <About />
+            <Portfolio />
+            <BannerImage intro={false} />
+            <Contact />
         </React.Fragment>
     )
 }

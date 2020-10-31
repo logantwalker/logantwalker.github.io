@@ -7,7 +7,7 @@
     height: 76px;
     border-bottom: 1px solid #ED1C24;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-    z-index: 5;
+    z-index: 6;
 }
 
 .dropdown-link{
@@ -17,4 +17,10 @@
 
 button:hover{
     color:#ED1C24;
+}
+
+@media (max-width: 600px){
+    .logoImage img{
+        margin-left:50px;
+    }
 }

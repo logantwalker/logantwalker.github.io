@@ -22,10 +22,10 @@ const About = (props) => {
                         <Col className='section-content' s={10}>
                             <Row>
                                 <Col className='profile-img' s={12} m={6}>
-                                    <img width='300px' src={avatar} alt='profile pic' />
+                                    <img src={avatar} alt='profile pic' />
                                 </Col>
-                                <Col s={12} m={6}>
-                                    <p>Description</p>
+                                <Col className='profile-desc's={12} m={6}>
+                                    <h4>Hi! I'm Logan Walker!</h4>
                                 </Col>
                             </Row>
                         </Col>
