@@ -19,3 +19,7 @@
 .subtitle-text{
     font-weight: 400;
 }
+
+.margin-remove{
+    margin-bottom: 0;
+}
