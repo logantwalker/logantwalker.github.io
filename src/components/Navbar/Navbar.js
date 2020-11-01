@@ -58,7 +58,7 @@ const Navbar = (props) => {
             <div className='customNavbar'>
                 <div className='nav-content'>
                     <Row>
-                        <Col s={10} m={2}className='logoImage'>
+                        <Col s={10} m={2} l={1} className='logoImage'>
                             <img height='75px' src={BrandLogo} alt='LW Logo' />
                         </Col>
                         <div className='navButtons hide-on-small-and-down'>

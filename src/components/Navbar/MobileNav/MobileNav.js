@@ -34,13 +34,13 @@ const MobileNav = (props) => {
     }
     return (
         <Row className='nav-window hide-on-med-and-up'>
-            <Col s={6}>
+            <Col s={6} className='center'>
                 <NavItem click={() => scrollToTop()}>Home</NavItem>
                 <NavItem click={() => scrollToAbout()}>About</NavItem>
             </Col>
-            <Col s={6}>
+            <Col s={6} className='center'>
                 <NavItem click={() => scrollToPortfolio()}>Portfolio</NavItem>
-                <NavItem click={() => scrollToPortfolio()}>Contact</NavItem>
+                <NavItem click={() => scrollToContact()}>Contact</NavItem>
             </Col>   
         </Row>
     )
