@@ -24,8 +24,18 @@ const About = (props) => {
                                 <Col className='profile-img' s={12} m={6}>
                                     <img src={avatar} alt='profile pic' />
                                 </Col>
-                                <Col className='profile-desc's={12} m={6}>
-                                    <h4>Hi! I'm Logan Walker!</h4>
+                                <Col className='profile-desc' s={12} m={6}>
+                                    <h4 className='intro'>Hi! I'm Logan Walker!</h4>
+                                    <p className='desc'>
+                                        I'm a Georgia Tech engineer turned web developer with a passion for problem solving and an addiction to motorcycles.
+                                    </p>
+                                    <p className='desc'>
+                                        I graduated in 2019 with a B.S. in Mechanical Engineering, but my interest in coding conviced me to go back to school. I will be graduating from Georgia Tech's Fullstack Coding Bootcamp in November, and my goal is to get accepted into Georgia Tech's Computer Science Masters Program in 2021.
+                                    </p>
+                                    <p className='desc'>
+                                        I am currently searching for a Software Engineering position
+                                        in Atlanta, GA!
+                                    </p>
                                 </Col>
                             </Row>
                         </Col>

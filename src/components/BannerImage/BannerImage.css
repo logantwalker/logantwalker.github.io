@@ -23,3 +23,10 @@
 .margin-remove{
     margin-bottom: 0;
 }
+
+@media (max-width: 500px){
+    .parallax-container{
+        width: 100%;
+        height: 325px;
+    }
+}
