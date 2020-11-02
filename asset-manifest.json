@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b4de05e.chunk.css",
+    "main.js": "/static/js/main.c15c8838.chunk.js",
+    "main.js.map": "/static/js/main.c15c8838.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1c3b231f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1c3b231f.js.map",
+    "static/js/2.7eb7195c.chunk.js": "/static/js/2.7eb7195c.chunk.js",
+    "static/js/2.7eb7195c.chunk.js.map": "/static/js/2.7eb7195c.chunk.js.map",
+    "static/js/3.68c90702.chunk.js": "/static/js/3.68c90702.chunk.js",
+    "static/js/3.68c90702.chunk.js.map": "/static/js/3.68c90702.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4b4de05e.chunk.css.map": "/static/css/main.4b4de05e.chunk.css.map",
+    "static/js/2.7eb7195c.chunk.js.LICENSE.txt": "/static/js/2.7eb7195c.chunk.js.LICENSE.txt",
+    "static/media/CRSimg.bbf0295e.png": "/static/media/CRSimg.bbf0295e.png",
+    "static/media/bannerIMG4.a74d8abb.jpg": "/static/media/bannerIMG4.a74d8abb.jpg",
+    "static/media/bannerIMG5.66d87c3c.jpg": "/static/media/bannerIMG5.66d87c3c.jpg",
+    "static/media/budgetImg.bfb723d6.png": "/static/media/budgetImg.bfb723d6.png",
+    "static/media/directoryImg.17a005de.png": "/static/media/directoryImg.17a005de.png",
+    "static/media/logo512.2e9ab313.png": "/static/media/logo512.2e9ab313.png",
+    "static/media/profile-img.38012c6c.JPG": "/static/media/profile-img.38012c6c.JPG",
+    "static/media/weatherImg.98a9b9a2.png": "/static/media/weatherImg.98a9b9a2.png",
+    "static/media/workoutImg.fb584599.png": "/static/media/workoutImg.fb584599.png",
+    "static/media/youFo.3786233c.png": "/static/media/youFo.3786233c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c3b231f.js",
+    "static/js/2.7eb7195c.chunk.js",
+    "static/css/main.4b4de05e.chunk.css",
+    "static/js/main.c15c8838.chunk.js"
+  ]
+}
